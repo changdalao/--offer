@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-//1.ÕÒ³öÊı×éÖĞÖØ¸´µÄÊı×Ö
+//1.æ‰¾å‡ºæ•°ç»„ä¸­é‡å¤çš„æ•°å­—
 //{2,3,1,0,2,5,3}-->2,3
-size_t GetNextPrimeNum(size_t num)//½â¾ö¹şÏ£³åÍ»£¬²ÉÓÃËæ»úÊı±í
+size_t GetNextPrimeNum(size_t num)//è§£å†³å“ˆå¸Œå†²çªï¼Œé‡‡ç”¨éšæœºæ•°è¡¨
 {
 	const int _PrimeSize = 28;
 	static const unsigned long _PrimeList[] =
@@ -20,7 +20,7 @@ size_t GetNextPrimeNum(size_t num)//½â¾ö¹şÏ£³åÍ»£¬²ÉÓÃËæ»úÊı±í
 			return _PrimeList[i];
 	}
 }
-int HashFunc(int key,size_t num)//¹şÏ£·½·¨
+int HashFunc(int key,size_t num)//å“ˆå¸Œæ–¹æ³•
 {
 	return key % num;
 }
@@ -34,7 +34,7 @@ void Test1()
 	for (int i = 0; i < len; i++)
 	{
 		index = HashFunc(arr[i], len);
-		if (Arr[index] != arr[i])//Èç¹û¹şÏ£±íÃ»ÓĞÕâ¸öÊı×Ö£¬ÔòÈë±í£¬Èç¹ûÓĞ£¬ÔòËµÃ÷Õâ¸öÊı×ÖÊÇÖØ¸´µÄ£¬Êä³ö
+		if (Arr[index] != arr[i])//å¦‚æœå“ˆå¸Œè¡¨æ²¡æœ‰è¿™ä¸ªæ•°å­—ï¼Œåˆ™å…¥è¡¨ï¼Œå¦‚æœæœ‰ï¼Œåˆ™è¯´æ˜è¿™ä¸ªæ•°å­—æ˜¯é‡å¤çš„ï¼Œè¾“å‡º
 		{
 			Arr[index] = arr[i];
 		}	
