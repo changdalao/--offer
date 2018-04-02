@@ -43,3 +43,24 @@ void Test1()
 	}
 	printf("\n");
 }
+//方法2:
+void Test2()
+{
+	int arr[] = { 2,3,1,0,2,5,3,5 };
+	int len = sizeof(arr) / sizeof(arr[0]);
+	int tmp = 0;
+	for (int i = 0; i < len; i++)
+	{
+		while (arr[i] != i)
+		{
+			if (arr[i] == arr[arr[i]])
+			{
+				printf("%d ", arr[i]);
+				break;
+			}
+			tmp = arr[i];
+			arr[i] = arr[tmp];
+			arr[tmp] = tmp;
+		}
+	}
+}
