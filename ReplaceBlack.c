@@ -32,3 +32,4 @@ void Test3()
 	ReplaceBlack(arr, key, strlen(arr)-1);
 	printf("变换后>%s\n", arr);
 }
+ 
