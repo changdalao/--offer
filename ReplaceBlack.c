@@ -1,3 +1,4 @@
+//时间复杂度O(n2)
 void ReplaceBlack(char* arr,char* key,int len)
 {
 	if (NULL == arr || NULL == key)
@@ -8,7 +9,7 @@ void ReplaceBlack(char* arr,char* key,int len)
 		char* prev = key;
 		if (*cur == ' ')
 		{
-			//字符串向后移动key个字符单位
+			//字符串向后移动key-1个字符单位
 			int plen = strlen(cur);
 			while (plen)
 			{
@@ -24,7 +25,7 @@ void ReplaceBlack(char* arr,char* key,int len)
 		cur++;
 	}
 }
-void Test3()
+void Test()
 {
 	char arr[100] = " welcome to the university! ";
 	printf("原字符串>%s\n",arr);
